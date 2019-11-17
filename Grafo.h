@@ -118,21 +118,7 @@ private:
             ver = q.front();
             q.pop();
             v.push_back(ver);
-
-            std::cout << "v: ";
-            for (auto i = v.begin(); i != v.end(); i++) {
-                std::cout << *i << " ";
-            }
-            std::cout << std::endl;
-
             auto adj = std::vector<std::pair<int,int>> (listas.at(ver));
-
-            std::cout << "adj to " << ver << ": ";
-            for (auto i = adj.begin(); i != adj.end(); i++) {
-                std::cout << (*i).first << " ";
-            }
-            std::cout << std::endl;
-            
             while (adj.size() > 0) {
                 auto next = adj.front().first;
                 if (col[next] == white) {
